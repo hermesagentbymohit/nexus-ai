@@ -102,8 +102,15 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
     font-weight: 400;
-    letter-spacing: -0.015em;
-    line-height: 1.15;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  /* H1 gets extra presence */
+  h1 {
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
   }
 
   /* Custom selection */

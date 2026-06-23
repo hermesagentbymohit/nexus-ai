@@ -61,7 +61,7 @@
 
   <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
     <!-- Logo with glow dot -->
-    <a href="/" class="flex items-center gap-3 group">
+    <a href="/nexus-ai/" class="flex items-center gap-3 group">
       <span class="relative flex items-center">
         <span
           class="text-2xl font-normal text-brand-600"
@@ -80,32 +80,32 @@
     <!-- Desktop Nav Links -->
     <div class="hidden md:flex md:items-center md:gap-10">
       <a
-        href="/"
-        class="text-sm font-medium text-muted hover:text-ink transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full"
+        href="/nexus-ai/"
+        class={`text-sm font-medium transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full ${Astro.url.pathname === '/' ? 'text-ink after:w-full' : 'text-muted hover:text-ink'}`}
       >
         Home
       </a>
       <a
-        href="/services"
-        class="text-sm font-medium text-muted hover:text-ink transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full"
+        href="/nexus-ai/services/"
+        class={`text-sm font-medium transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full ${Astro.url.pathname.startsWith('/services') ? 'text-ink after:w-full' : 'text-muted hover:text-ink'}`}
       >
         Services
       </a>
       <a
-        href="/case-studies"
-        class="text-sm font-medium text-muted hover:text-ink transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full"
+        href="/nexus-ai/case-studies/"
+        class={`text-sm font-medium transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full ${Astro.url.pathname.startsWith('/case-studies') ? 'text-ink after:w-full' : 'text-muted hover:text-ink'}`}
       >
         Case Studies
       </a>
       <a
-        href="/blog"
-        class="text-sm font-medium text-muted hover:text-ink transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full"
+        href="/nexus-ai/blog/"
+        class={`text-sm font-medium transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full ${Astro.url.pathname.startsWith('/blog') ? 'text-ink after:w-full' : 'text-muted hover:text-ink'}`}
       >
         Blog
       </a>
       <a
-        href="/contact"
-        class="text-sm font-medium text-muted hover:text-ink transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full"
+        href="/nexus-ai/contact/"
+        class={`text-sm font-medium transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full ${Astro.url.pathname.startsWith('/contact') ? 'text-ink after:w-full' : 'text-muted hover:text-ink'}`}
       >
         Contact
       </a>
@@ -114,7 +114,7 @@
     <!-- Desktop CTA -->
     <div class="hidden md:block">
       <a
-        href="/contact"
+        href="/nexus-ai/contact/"
         class="inline-flex items-center rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 transition-all duration-200 hover:shadow-md hover:shadow-brand-600/20 active:scale-[0.97]"
       >
         Get a Demo
@@ -159,7 +159,7 @@
     >
       <div class="flex flex-col items-center justify-center h-full gap-8 px-6">
         <a
-          href="/"
+          href="/nexus-ai/"
           class="text-2xl font-medium text-ink hover:text-brand-600 transition-colors"
           style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;"
           onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
@@ -167,7 +167,7 @@
           Home
         </a>
         <a
-          href="/services"
+          href="/nexus-ai/services/"
           class="text-2xl font-medium text-ink hover:text-brand-600 transition-colors"
           style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;"
           onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
@@ -175,7 +175,7 @@
           Services
         </a>
         <a
-          href="/case-studies"
+          href="/nexus-ai/case-studies/"
           class="text-2xl font-medium text-ink hover:text-brand-600 transition-colors"
           style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;"
           onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
@@ -183,7 +183,7 @@
           Case Studies
         </a>
         <a
-          href="/blog"
+          href="/nexus-ai/blog/"
           class="text-2xl font-medium text-ink hover:text-brand-600 transition-colors"
           style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;"
           onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
@@ -191,7 +191,7 @@
           Blog
         </a>
         <a
-          href="/contact"
+          href="/nexus-ai/contact/"
           class="text-2xl font-medium text-ink hover:text-brand-600 transition-colors"
           style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;"
           onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
@@ -200,7 +200,7 @@
         </a>
         <div class="mt-4">
           <a
-            href="/contact"
+            href="/nexus-ai/contact/"
             class="inline-flex items-center rounded-xl bg-brand-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-600/25 hover:bg-brand-700 transition-all duration-200"
             onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
           >

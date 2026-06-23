@@ -15,6 +15,13 @@ const {
 
 const siteTitle = "Nexus AI — AI Automation & Agentic Solutions";
 const fullTitle = title === siteTitle ? siteTitle : `${title} | Nexus AI`;
+
+// Helper for base-prefixed URLs – ensures all internal links work on GitHub Pages
+const base = import.meta.env.BASE_URL || '/nexus-ai/';
+/** Prefix a path with the site base URL, stripping any double slashes */
+function $link(path: string): string {
+  return (base + path).replace(/\/{2,}/g, '/');
+}
 ---
 
 <!DOCTYPE html>
@@ -104,10 +111,10 @@ const fullTitle = title === siteTitle ? siteTitle : `${title} | Nexus AI`;
               <div>
                 <h4 class="text-xs font-semibold uppercase tracking-[0.12em] text-warm-500">Product</h4>
                 <ul class="mt-6 space-y-4">
-                  <li><a href="/services" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">AI Agents</a></li>
-                  <li><a href="/services" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Automation</a></li>
-                  <li><a href="/services" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Analytics</a></li>
-                  <li><a href="/services" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Consulting</a></li>
+                  <li><a href="/nexus-ai/services" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">AI Agents</a></li>
+                  <li><a href="/nexus-ai/services" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Automation</a></li>
+                  <li><a href="/nexus-ai/services" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Analytics</a></li>
+                  <li><a href="/nexus-ai/services" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Consulting</a></li>
                 </ul>
               </div>
 
@@ -115,10 +122,10 @@ const fullTitle = title === siteTitle ? siteTitle : `${title} | Nexus AI`;
               <div>
                 <h4 class="text-xs font-semibold uppercase tracking-[0.12em] text-warm-500">Company</h4>
                 <ul class="mt-6 space-y-4">
-                  <li><a href="/" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Home</a></li>
-                  <li><a href="/case-studies" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Case Studies</a></li>
-                  <li><a href="/blog" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Blog</a></li>
-                  <li><a href="/contact" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Contact</a></li>
+                  <li><a href="/nexus-ai/" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Home</a></li>
+                  <li><a href="/nexus-ai/case-studies" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Case Studies</a></li>
+                  <li><a href="/nexus-ai/blog" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Blog</a></li>
+                  <li><a href="/nexus-ai/contact" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Contact</a></li>
                 </ul>
               </div>
 
@@ -126,8 +133,8 @@ const fullTitle = title === siteTitle ? siteTitle : `${title} | Nexus AI`;
               <div>
                 <h4 class="text-xs font-semibold uppercase tracking-[0.12em] text-warm-500">Legal</h4>
                 <ul class="mt-6 space-y-4">
-                  <li><a href="/privacy" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Privacy Policy</a></li>
-                  <li><a href="/terms" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Terms of Service</a></li>
+                  <li><a href="/nexus-ai/privacy" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Privacy Policy</a></li>
+                  <li><a href="/nexus-ai/terms" class="text-sm text-ink/70 hover:text-ink transition-all duration-200 hover:translate-x-0.5 inline-block">Terms of Service</a></li>
                 </ul>
               </div>
             </div>

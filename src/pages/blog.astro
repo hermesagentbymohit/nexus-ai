@@ -17,37 +17,43 @@ const posts: BlogPost[] = [
     date: "June 18, 2026",
     category: "AI Agents",
     title: "Building Multi-Agent Systems That Actually Work in Production",
-    excerpt: "Multi-agent orchestration promises a lot but delivery is hard. Here's our practical playbook for designing agent systems that scale reliably in enterprise environments."
+    excerpt: "Multi-agent orchestration promises a lot but delivery is hard. Here's our practical playbook for designing agent systems that scale reliably in enterprise environments.",
+    slug: "/nexus-ai/contact",
   },
   {
     date: "June 11, 2026",
     category: "Automation",
     title: "How We Automated 80% of Invoice Processing for a Fortune 500 Client",
-    excerpt: "A deep dive into how we combined OCR, LLM extraction, and workflow automation to reduce invoice processing from 12 minutes to under 30 seconds."
+    excerpt: "A deep dive into how we combined OCR, LLM extraction, and workflow automation to reduce invoice processing from 12 minutes to under 30 seconds.",
+    slug: "/nexus-ai/contact",
   },
   {
     date: "June 4, 2026",
     category: "Analytics",
     title: "Real-Time Anomaly Detection: Catching Problems Before They Cost You",
-    excerpt: "Traditional dashboards show you what already happened. AI-powered anomaly detection alerts you the moment something goes wrong — often before anyone notices."
+    excerpt: "Traditional dashboards show you what already happened. AI-powered anomaly detection alerts you the moment something goes wrong — often before anyone notices.",
+    slug: "/nexus-ai/contact",
   },
   {
     date: "May 28, 2026",
     category: "AI Agents",
     title: "RAG Pipelines in the Enterprise: A Practical Architecture Guide",
-    excerpt: "Retrieval-Augmented Generation is the backbone of reliable AI agents. We break down the architecture patterns that work at scale and the pitfalls to avoid."
+    excerpt: "Retrieval-Augmented Generation is the backbone of reliable AI agents. We break down the architecture patterns that work at scale and the pitfalls to avoid.",
+    slug: "/nexus-ai/contact",
   },
   {
     date: "May 21, 2026",
     category: "Automation",
     title: "From Process Mining to Automation: A Step-by-Step Framework",
-    excerpt: "Most automation initiatives fail because they skip the discovery phase. Learn how process mining gives you a data-driven roadmap for automation that delivers ROI."
+    excerpt: "Most automation initiatives fail because they skip the discovery phase. Learn how process mining gives you a data-driven roadmap for automation that delivers ROI.",
+    slug: "/nexus-ai/contact",
   },
   {
     date: "May 14, 2026",
     category: "Analytics",
     title: "Predictive Analytics for Supply Chains: Forecasting Demand with AI",
-    excerpt: "Supply chain volatility is the new normal. Discover how machine learning models can forecast demand with 94% accuracy and reduce inventory carrying costs."
+    excerpt: "Supply chain volatility is the new normal. Discover how machine learning models can forecast demand with 94% accuracy and reduce inventory carrying costs.",
+    slug: "/nexus-ai/contact",
   }
 ];
 ---
@@ -82,7 +88,7 @@ const posts: BlogPost[] = [
           {
             categories.map((cat) => (
               <a
-                href={cat === "All" ? "/blog" : `/blog?category=${cat.toLowerCase().replace(' ', '-')}`}
+                href={cat === "All" ? "/nexus-ai/blog" : `/nexus-ai/blog?category=${cat.toLowerCase().replace(' ', '-')}`}
                 class={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-200 ${
                   cat === "All"
                     ? "bg-brand-600 text-white"
