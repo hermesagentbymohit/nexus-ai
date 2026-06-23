@@ -1,0 +1,213 @@
+---
+// No props needed
+---
+
+<header
+  id="site-header"
+  class="sticky top-0 z-50 bg-surface/80 backdrop-blur-xl transition-all duration-300"
+  data-scrolled="false"
+>
+  <script>
+    // Scroll detection for border fade-in
+    const header = document.getElementById('site-header');
+    if (header) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.boundingClientRect.top < 0) {
+            header.dataset.scrolled = 'true';
+          } else {
+            header.dataset.scrolled = 'false';
+          }
+        },
+        { threshold: [0], rootMargin: '-1px 0px 0px 0px' }
+      );
+      // Observe a sentinel at the very top of the page
+      const sentinel = document.createElement('div');
+      sentinel.style.position = 'absolute';
+      sentinel.style.top = '0';
+      sentinel.style.left = '0';
+      sentinel.style.width = '1px';
+      sentinel.style.height = '1px';
+      sentinel.style.pointerEvents = 'none';
+      document.body.prepend(sentinel);
+      observer.observe(sentinel);
+    }
+
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('nav-toggle');
+      const menu = document.getElementById('mobile-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('change', () => {
+          menu.classList.toggle('hidden', !toggle.checked);
+          menu.classList.toggle('flex', toggle.checked);
+          document.body.style.overflow = toggle.checked ? 'hidden' : '';
+        });
+      }
+    });
+  </script>
+
+  <!-- Bottom border that appears on scroll, using data attribute -->
+  <div
+    class="absolute inset-x-0 bottom-0 h-px transition-opacity duration-300"
+    style="background: linear-gradient(90deg, transparent, var(--color-border), transparent); opacity: 0;"
+    data-border
+  ></div>
+  <style>
+    #site-header[data-scrolled="true"] [data-border] {
+      opacity: 1 !important;
+    }
+  </style>
+
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+    <!-- Logo with glow dot -->
+    <a href="/" class="flex items-center gap-3 group">
+      <span class="relative flex items-center">
+        <span
+          class="text-2xl font-normal text-brand-600"
+          style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; letter-spacing: -0.03em;"
+        >
+          Nexus AI
+        </span>
+        <!-- Glow dot: active/online indicator -->
+        <span class="relative ml-2 flex h-2.5 w-2.5">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75"></span>
+          <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-brand-500"></span>
+        </span>
+      </span>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <div class="hidden md:flex md:items-center md:gap-10">
+      <a
+        href="/"
+        class="text-sm font-medium text-muted hover:text-ink transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full"
+      >
+        Home
+      </a>
+      <a
+        href="/services"
+        class="text-sm font-medium text-muted hover:text-ink transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full"
+      >
+        Services
+      </a>
+      <a
+        href="/case-studies"
+        class="text-sm font-medium text-muted hover:text-ink transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full"
+      >
+        Case Studies
+      </a>
+      <a
+        href="/blog"
+        class="text-sm font-medium text-muted hover:text-ink transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full"
+      >
+        Blog
+      </a>
+      <a
+        href="/contact"
+        class="text-sm font-medium text-muted hover:text-ink transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full"
+      >
+        Contact
+      </a>
+    </div>
+
+    <!-- Desktop CTA -->
+    <div class="hidden md:block">
+      <a
+        href="/contact"
+        class="inline-flex items-center rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 transition-all duration-200 hover:shadow-md hover:shadow-brand-600/20 active:scale-[0.97]"
+      >
+        Get a Demo
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button
+      id="nav-toggle-btn"
+      class="md:hidden cursor-pointer p-2 -mr-2 relative z-50"
+      aria-label="Toggle navigation menu"
+      onclick="const t=document.getElementById('nav-toggle'); const m=document.getElementById('mobile-menu'); t.checked=!t.checked; m.classList.toggle('hidden',!t.checked); m.classList.toggle('flex',t.checked); document.body.style.overflow=t.checked?'hidden':'';"
+    >
+      <div class="flex flex-col items-center justify-center w-6 h-6">
+        <svg class="h-6 w-6 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="hamburger-icon">
+          <path
+            id="menu-open-path"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+          <path
+            id="menu-close-path"
+            class="hidden"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+    </button>
+
+    <!-- Hidden checkbox for state -->
+    <input type="checkbox" id="nav-toggle" class="hidden" />
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobile-menu"
+      class="hidden fixed inset-0 top-0 z-40 flex-col bg-surface/95 backdrop-blur-xl md:hidden animate-fade-in"
+    >
+      <div class="flex flex-col items-center justify-center h-full gap-8 px-6">
+        <a
+          href="/"
+          class="text-2xl font-medium text-ink hover:text-brand-600 transition-colors"
+          style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;"
+          onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
+        >
+          Home
+        </a>
+        <a
+          href="/services"
+          class="text-2xl font-medium text-ink hover:text-brand-600 transition-colors"
+          style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;"
+          onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
+        >
+          Services
+        </a>
+        <a
+          href="/case-studies"
+          class="text-2xl font-medium text-ink hover:text-brand-600 transition-colors"
+          style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;"
+          onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
+        >
+          Case Studies
+        </a>
+        <a
+          href="/blog"
+          class="text-2xl font-medium text-ink hover:text-brand-600 transition-colors"
+          style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;"
+          onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
+        >
+          Blog
+        </a>
+        <a
+          href="/contact"
+          class="text-2xl font-medium text-ink hover:text-brand-600 transition-colors"
+          style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;"
+          onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
+        >
+          Contact
+        </a>
+        <div class="mt-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center rounded-xl bg-brand-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-600/25 hover:bg-brand-700 transition-all duration-200"
+            onclick="document.getElementById('nav-toggle').checked=false;document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex');document.body.style.overflow='';"
+          >
+            Get a Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

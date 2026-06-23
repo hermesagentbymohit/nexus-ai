@@ -1,0 +1,188 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+
+interface BlogPost {
+  date: string;
+  category: string;
+  title: string;
+  excerpt: string;
+  slug: string;
+}
+
+const categories = ["All", "AI Agents", "Automation", "Analytics"];
+
+const posts: BlogPost[] = [
+  {
+    date: "June 18, 2026",
+    category: "AI Agents",
+    title: "Building Multi-Agent Systems That Actually Work in Production",
+    excerpt: "Multi-agent orchestration promises a lot but delivery is hard. Here's our practical playbook for designing agent systems that scale reliably in enterprise environments."
+  },
+  {
+    date: "June 11, 2026",
+    category: "Automation",
+    title: "How We Automated 80% of Invoice Processing for a Fortune 500 Client",
+    excerpt: "A deep dive into how we combined OCR, LLM extraction, and workflow automation to reduce invoice processing from 12 minutes to under 30 seconds."
+  },
+  {
+    date: "June 4, 2026",
+    category: "Analytics",
+    title: "Real-Time Anomaly Detection: Catching Problems Before They Cost You",
+    excerpt: "Traditional dashboards show you what already happened. AI-powered anomaly detection alerts you the moment something goes wrong — often before anyone notices."
+  },
+  {
+    date: "May 28, 2026",
+    category: "AI Agents",
+    title: "RAG Pipelines in the Enterprise: A Practical Architecture Guide",
+    excerpt: "Retrieval-Augmented Generation is the backbone of reliable AI agents. We break down the architecture patterns that work at scale and the pitfalls to avoid."
+  },
+  {
+    date: "May 21, 2026",
+    category: "Automation",
+    title: "From Process Mining to Automation: A Step-by-Step Framework",
+    excerpt: "Most automation initiatives fail because they skip the discovery phase. Learn how process mining gives you a data-driven roadmap for automation that delivers ROI."
+  },
+  {
+    date: "May 14, 2026",
+    category: "Analytics",
+    title: "Predictive Analytics for Supply Chains: Forecasting Demand with AI",
+    excerpt: "Supply chain volatility is the new normal. Discover how machine learning models can forecast demand with 94% accuracy and reduce inventory carrying costs."
+  }
+];
+---
+
+<Layout
+  title="Blog — Nexus AI"
+  description="Insights, guides, and case studies on AI agents, workflow automation, intelligent analytics, and enterprise AI strategy from the team at Nexus AI."
+>
+  <Header />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-brand-900 via-brand-800 to-brand-950 px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-warm-300">Our Blog</p>
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Insights from the<br />
+          <span class="text-warm-300">Frontier of AI</span>
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-warm-200">
+          Practical guides, real-world case studies, and strategic thinking on how AI agents 
+          and automation are reshaping enterprise operations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Category Filter Bar -->
+    <section class="bg-white border-b border-border px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl py-6">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="text-sm font-medium text-muted mr-2">Filter by:</span>
+          {
+            categories.map((cat) => (
+              <a
+                href={cat === "All" ? "/blog" : `/blog?category=${cat.toLowerCase().replace(' ', '-')}`}
+                class={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-200 ${
+                  cat === "All"
+                    ? "bg-brand-600 text-white"
+                    : "bg-warm-50 text-ink hover:bg-warm-100 border border-border"
+                }`}
+              >
+                {cat}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="bg-white px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            posts.map((post) => (
+              <article class="group flex flex-col rounded-2xl border border-border bg-surface overflow-hidden transition-all duration-300 hover:border-accent-200 hover:shadow-lg hover:shadow-accent-100/50 hover:-translate-y-1">
+                <!-- Card top accent -->
+                <div class="h-2 bg-gradient-to-r from-brand-500 to-brand-600"></div>
+
+                <div class="flex flex-1 flex-col p-6">
+                  <!-- Date and category -->
+                  <div class="flex items-center justify-between">
+                    <time class="text-xs text-muted">{post.date}</time>
+                    <span class="inline-flex items-center rounded-full bg-warm-100 px-3 py-1 text-xs font-medium text-brand-700">
+                      {post.category}
+                    </span>
+                  </div>
+
+                  <!-- Title -->
+                  <h2 class="mt-4 text-lg font-semibold text-ink group-hover:text-brand-600 transition-colors">
+                    <a href={post.slug}>
+                      {post.title}
+                    </a>
+                  </h2>
+
+                  <!-- Excerpt -->
+                  <p class="mt-3 flex-1 text-sm leading-relaxed text-muted">
+                    {post.excerpt}
+                  </p>
+
+                  <!-- Read More -->
+                  <div class="mt-6 pt-4 border-t border-border">
+                    <a
+                      href={post.slug}
+                      class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors"
+                    >
+                      Read More
+                      <svg class="ml-1.5 h-3.5 w-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="bg-gradient-to-br from-brand-900 via-brand-800 to-brand-950 px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Stay Ahead of the Curve
+        </h2>
+        <p class="mt-4 text-lg text-warm-200">
+          Get the latest insights on AI agents, automation, and analytics delivered to your inbox 
+          every two weeks. No spam, just signal.
+        </p>
+
+        <form class="mx-auto mt-10 flex max-w-xl flex-col sm:flex-row gap-4">
+          <label for="email" class="sr-only">Email address</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="you@company.com"
+            required
+            class="flex-1 rounded-xl border border-warm-700 bg-warm-800/50 px-5 py-4 text-base text-white placeholder-warm-400 outline-none focus:border-accent-400 focus:ring-2 focus:ring-accent-500/30 transition-all"
+          />
+          <button
+            type="submit"
+            class="inline-flex shrink-0 items-center justify-center rounded-xl bg-brand-500 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/25 hover:bg-brand-400 hover:shadow-xl transition-all duration-200 active:scale-[0.97]"
+          >
+            Subscribe
+            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+          </button>
+        </form>
+
+        <p class="mt-4 text-xs text-warm-400">
+          We respect your privacy. Unsubscribe at any time.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>

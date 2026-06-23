@@ -1,0 +1,200 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import ServicesSection from "../components/ServicesSection.astro";
+---
+
+<Layout
+  title="Nexus AI — AI Automation & Agentic Solutions"
+  description="We build AI agents and automation systems that transform enterprise workflows — cutting costs by 60% and accelerating decision-making."
+>
+  <Header />
+
+  <main>
+    <Hero />
+
+    <!-- ═══ Why Us Section ═══ -->
+    <section class="bg-warm-50 px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="text-xs font-semibold uppercase tracking-[0.12em] text-brand-600">Why Nexus AI</span>
+          <h2 class="mt-4 text-4xl sm:text-5xl font-normal text-ink tracking-[-0.02em]">
+            Built Different. Built Better.
+          </h2>
+          <p class="mt-4 text-lg leading-relaxed text-warm-600">
+            We don't just deploy tools — we engineer outcomes. Here's what sets us apart.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-10 md:grid-cols-3">
+          <!-- Speed to Value -->
+          <div class="group relative rounded-2xl border border-warm-200/60 bg-surface p-8 transition-all duration-300 hover:border-brand-200 hover:shadow-md hover:shadow-brand-100/20 hover:-translate-y-1">
+            <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-brand-50 ring-1 ring-brand-200 mb-6 group-hover:scale-105 transition-transform">
+              <svg class="h-7 w-7 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-normal text-ink" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">Speed to Value</h3>
+            <p class="mt-3 text-sm leading-relaxed text-warm-600">
+              Our modular agent framework lets us deploy production-ready automation in weeks, not months. Most clients see measurable ROI within 30 days of go-live.
+            </p>
+          </div>
+
+          <!-- Enterprise-Grade Reliability -->
+          <div class="group relative rounded-2xl border border-warm-200/60 bg-surface p-8 transition-all duration-300 hover:border-brand-200 hover:shadow-md hover:shadow-brand-100/20 hover:-translate-y-1">
+            <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-accent-50 ring-1 ring-accent-200 mb-6 group-hover:scale-105 transition-transform">
+              <svg class="h-7 w-7 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-normal text-ink" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">Enterprise Reliability</h3>
+            <p class="mt-3 text-sm leading-relaxed text-warm-600">
+              Every solution ships with SOC 2 compliance, 99.9% uptime SLAs, and comprehensive monitoring. Your data stays secure and your systems stay running.
+            </p>
+          </div>
+
+          <!-- Deep Technical Expertise -->
+          <div class="group relative rounded-2xl border border-warm-200/60 bg-surface p-8 transition-all duration-300 hover:border-brand-200 hover:shadow-md hover:shadow-brand-100/20 hover:-translate-y-1">
+            <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-brand-50 ring-1 ring-brand-200 mb-6 group-hover:scale-105 transition-transform">
+              <svg class="h-7 w-7 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-normal text-ink" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">Deep Expertise</h3>
+            <p class="mt-3 text-sm leading-relaxed text-warm-600">
+              Our team includes former engineers from FAANG, published AI researchers, and seasoned enterprise architects. We bring academic rigor to industrial-scale problems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Stats Section ═══ -->
+    <section class="bg-brand-900 px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid grid-cols-2 gap-12 md:grid-cols-4">
+          <div class="text-center">
+            <p class="text-4xl sm:text-5xl font-normal text-white" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">100+</p>
+            <p class="mt-2 text-sm font-medium text-brand-200">Projects Delivered</p>
+          </div>
+          <div class="text-center">
+            <p class="text-4xl sm:text-5xl font-normal text-white" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">60%</p>
+            <p class="mt-2 text-sm font-medium text-brand-200">Avg. Cost Reduction</p>
+          </div>
+          <div class="text-center">
+            <p class="text-4xl sm:text-5xl font-normal text-white" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">99.9%</p>
+            <p class="mt-2 text-sm font-medium text-brand-200">Uptime Guarantee</p>
+          </div>
+          <div class="text-center">
+            <p class="text-4xl sm:text-5xl font-normal text-white" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">5+</p>
+            <p class="mt-2 text-sm font-medium text-brand-200">Years of Innovation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Services Section ═══ -->
+    <ServicesSection />
+
+    <!-- ═══ Our Process Section ═══ -->
+    <section class="bg-surface px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="text-xs font-semibold uppercase tracking-[0.12em] text-brand-600">Our Process</span>
+          <h2 class="mt-4 text-4xl sm:text-5xl font-normal text-ink tracking-[-0.02em]">
+            From Idea to Impact
+          </h2>
+          <p class="mt-4 text-lg leading-relaxed text-warm-600">
+            A proven four-phase methodology that de-risks AI adoption and delivers results — fast.
+          </p>
+        </div>
+
+        <!-- Bento-style process layout -->
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-12 gap-6">
+          <!-- Step 1: Discovery (spans 5 cols) -->
+          <div class="md:col-span-5 rounded-2xl border border-border/70 bg-surface p-8 group hover:border-brand-200 transition-all duration-300 hover:shadow-sm">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-500 text-white text-sm font-semibold">01</span>
+              <h3 class="text-xl font-normal text-ink" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">Discovery</h3>
+            </div>
+            <p class="text-sm leading-relaxed text-warm-600">
+              We audit your current workflows, data infrastructure, and pain points. Through stakeholder interviews and process mining, we identify the highest-impact automation opportunities.
+            </p>
+          </div>
+
+          <!-- Step 2: Design (spans 7 cols) -->
+          <div class="md:col-span-7 rounded-2xl border border-border/70 bg-surface p-8 group hover:border-accent-200 transition-all duration-300 hover:shadow-sm">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-accent-500 text-white text-sm font-semibold">02</span>
+              <h3 class="text-xl font-normal text-ink" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">Design</h3>
+            </div>
+            <p class="text-sm leading-relaxed text-warm-600">
+              Our architects design the solution — agent architecture, data pipelines, integration points, and UX. We deliver blueprints and prototypes so you see exactly what we'll build before we build it.
+            </p>
+          </div>
+
+          <!-- Step 3: Build (spans 7 cols) -->
+          <div class="md:col-span-7 rounded-2xl border border-border/70 bg-surface p-8 group hover:border-brand-200 transition-all duration-300 hover:shadow-sm">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-white text-sm font-semibold">03</span>
+              <h3 class="text-xl font-normal text-ink" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">Build</h3>
+            </div>
+            <p class="text-sm leading-relaxed text-warm-600">
+              Agile development in two-week sprints. We build, test, and iterate with continuous integration. You get visibility into progress with real demos at every milestone.
+            </p>
+          </div>
+
+          <!-- Step 4: Deploy (spans 5 cols) -->
+          <div class="md:col-span-5 rounded-2xl border border-border/70 bg-surface p-8 group hover:border-accent-200 transition-all duration-300 hover:shadow-sm">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-accent-600 text-white text-sm font-semibold">04</span>
+              <h3 class="text-xl font-normal text-ink" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">Deploy</h3>
+            </div>
+            <p class="text-sm leading-relaxed text-warm-600">
+              Production deployment with full monitoring, rollback capabilities, and knowledge transfer. We stay on for post-launch optimization and continuous improvement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Final CTA Section ═══ -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-accent-50 via-accent-100/60 to-warm-50 px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <!-- Subtle background ornament -->
+      <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div class="absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-accent-200/20 blur-[100px]"></div>
+        <div class="absolute -bottom-32 -left-32 h-[400px] w-[400px] rounded-full bg-brand-100/20 blur-[100px]"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-4xl sm:text-5xl font-normal text-ink tracking-[-0.02em]">
+          Ready to Transform Your Business?
+        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-warm-600 max-w-xl mx-auto">
+          Let's build an AI-powered future for your enterprise. Our team is ready when you are.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/25 hover:bg-brand-700 hover:shadow-xl hover:shadow-brand-600/30 transition-all duration-200 active:scale-[0.97]"
+          >
+            Book a Demo
+            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href="mailto:hello@nexus-ai.com"
+            class="inline-flex items-center rounded-xl border border-warm-300 px-8 py-4 text-base font-semibold text-ink hover:border-brand-300 hover:bg-white/50 transition-all duration-200"
+          >
+            hello@nexus-ai.com
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-warm-500">
+          No commitment required. We'll show you what's possible with a free consultation.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>

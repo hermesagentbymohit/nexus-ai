@@ -1,0 +1,514 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+---
+
+<Layout
+  title="Custom AI Agents — Nexus AI"
+  description="Nexus AI builds custom AI agents for your business — including LLM agents, RAG pipelines, multi-agent orchestration, and tool-use agents that drive real results."
+>
+  <Header />
+
+  <main>
+    <!-- ============================================================ -->
+    <!-- HERO SECTION                                                  -->
+    <!-- ============================================================ -->
+    <section class="bg-gradient-to-br from-brand-900 via-brand-800 to-brand-950 px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-warm-300">AI Agent Development</p>
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Custom AI Agents<br />
+          <span class="text-warm-300">Built for Your Business</span>
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-warm-200">
+          Stop settling for generic chatbots. We design and deploy custom LLM-powered agents 
+          that understand your domain, reason through complex problems, and execute multi-step 
+          workflows autonomously — delivering measurable ROI from day one.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center rounded-xl bg-brand-500 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/25 hover:bg-brand-400 hover:shadow-xl transition-all duration-200 active:scale-[0.97]"
+          >
+            Build Your First Agent
+            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- WHAT WE BUILD — 4-card grid                                   -->
+    <!-- ============================================================ -->
+    <section class="bg-white px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-widest text-brand-600">What We Build</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            Purpose-Built Agents for Every Need
+          </h2>
+          <p class="mt-4 text-lg text-muted">
+            From single-purpose assistants to coordinated swarms of specialized AI — we match 
+            the architecture to the job.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Custom LLM Agents -->
+          <div class="group rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:border-accent-200 hover:shadow-lg hover:-translate-y-1">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-warm-100 group-hover:bg-warm-200 transition-colors">
+              <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-semibold text-ink">Custom LLM Agents</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">
+              Domain-specific agents powered by GPT-4o, Claude 3.5, and open-source models 
+              fine-tuned on your proprietary data. They reason step-by-step, maintain 
+              conversational memory, and operate within guardrails you define.
+            </p>
+          </div>
+
+          <!-- RAG Pipelines -->
+          <div class="group rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:border-accent-200 hover:shadow-lg hover:-translate-y-1">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-warm-100 group-hover:bg-warm-200 transition-colors">
+              <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-semibold text-ink">RAG Pipelines</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">
+              Retrieval-Augmented Generation that connects LLMs directly to your knowledge 
+              base — internal wikis, product catalogs, support tickets, and technical 
+              documentation — delivering factual, cite-able answers with zero hallucination risk.
+            </p>
+          </div>
+
+          <!-- Multi-Agent Orchestration -->
+          <div class="group rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:border-accent-200 hover:shadow-lg hover:-translate-y-1">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-warm-100 group-hover:bg-warm-200 transition-colors">
+              <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-semibold text-ink">Multi-Agent Orchestration</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">
+              Teams of specialized agents that collaborate on complex workflows — a researcher 
+              gathers context, a planner decomposes tasks, an executor takes action, and a 
+              reviewer validates output. Each agent plays a defined role with clear handoffs.
+            </p>
+          </div>
+
+          <!-- Tool-Use Agents -->
+          <div class="group rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:border-accent-200 hover:shadow-lg hover:-translate-y-1">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-warm-100 group-hover:bg-warm-200 transition-colors">
+              <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.42 15.17l-2.49 3.22a1 1 0 01-1.43.2L4.7 15.3a1 1 0 01-.2-1.43l3.22-2.49m4.6-3.22l2.49-3.22a1 1 0 011.43-.2l2.8 2.09a1 1 0 01.2 1.43l-3.22 2.49m-5.89 4.11l-2.04 2.04m11.66-11.66l-2.04 2.04m3.18-1.47l-2.04 2.04M9.5 12a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm10 0a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-semibold text-ink">Tool-Use Agents</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">
+              Agents that interact with APIs, databases, CRM systems, and external services. 
+              They can query Salesforce for deal status, create Jira tickets, send Slack 
+              notifications, and trigger ERP workflows — all through natural language.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- OUR APPROACH — 4-step numbered process                        -->
+    <!-- ============================================================ -->
+    <section class="bg-gradient-to-br from-brand-900 via-brand-800 to-brand-950 px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-widest text-warm-300">Our Approach</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            From Idea to Production Agent
+          </h2>
+          <p class="mt-4 text-lg text-warm-200">
+            We follow a systematic four-phase methodology that de-risks agent development and 
+            ensures every deployment delivers measurable business impact.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Step 1: Discovery -->
+          <div class="relative text-center">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-600/30 border-2 border-brand-400">
+              <svg class="h-7 w-7 text-warm-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold text-white">Discovery</h3>
+            <p class="mt-3 text-sm leading-relaxed text-warm-200">
+              We analyze your domain, identify high-value use cases, map existing data 
+              sources, and define success metrics. You walk away with a prioritised 
+              roadmap of agent opportunities ranked by impact and feasibility.
+            </p>
+          </div>
+
+          <!-- Step 2: Architecture -->
+          <div class="relative text-center">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-600/30 border-2 border-brand-400">
+              <svg class="h-7 w-7 text-warm-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold text-white">Architecture</h3>
+            <p class="mt-3 text-sm leading-relaxed text-warm-200">
+              We design the agentic system — choosing the right LLM backbone, designing 
+              RAG pipelines, defining tool integrations, setting guardrails, and creating 
+              a human-in-the-loop oversight layer for critical decision points.
+            </p>
+          </div>
+
+          <!-- Step 3: Build -->
+          <div class="relative text-center">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-600/30 border-2 border-brand-400">
+              <svg class="h-7 w-7 text-warm-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.007-1.875 2.25-1.875s2.25.84 2.25 1.875c0 .369-.128.713-.349 1.003-.215.283-.401.604-.401.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.959.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z" />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold text-white">Build</h3>
+            <p class="mt-3 text-sm leading-relaxed text-warm-200">
+              We develop, test, and refine the agent in iterative sprints — with weekly 
+              demos, prompt engineering, retrieval tuning, and rigorous evaluation against 
+              your success criteria before any production deployment.
+            </p>
+          </div>
+
+          <!-- Step 4: Deploy -->
+          <div class="relative text-center">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-600/30 border-2 border-brand-400">
+              <svg class="h-7 w-7 text-warm-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold text-white">Deploy</h3>
+            <p class="mt-3 text-sm leading-relaxed text-warm-200">
+              We deploy your agent into production with monitoring, logging, and fallback 
+              strategies. Then we continuously refine — tracking performance, gathering 
+              feedback, and iterating on prompts and retrieval to maximize accuracy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TECH STACK — badges / pills                                   -->
+    <!-- ============================================================ -->
+    <section class="bg-white px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-widest text-brand-600">Tech Stack</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            Best-in-Class Tools, Expertly Applied
+          </h2>
+          <p class="mt-4 text-lg text-muted">
+            We choose the best technology for each agent's requirements — from lightweight 
+            embedding models to full-scale orchestration frameworks.
+          </p>
+        </div>
+
+        <div class="mt-12 flex flex-wrap items-center justify-center gap-3">
+          <!-- LangChain -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">LangChain</span>
+          <!-- LangGraph -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">LangGraph</span>
+          <!-- CrewAI -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">CrewAI</span>
+          <!-- AutoGen -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">AutoGen</span>
+          <!-- OpenAI -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">OpenAI</span>
+          <!-- Anthropic -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">Anthropic</span>
+          <!-- Pinecone -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">Pinecone</span>
+          <!-- Weaviate -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">Weaviate</span>
+          <!-- Chroma -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">Chroma</span>
+          <!-- FastAPI -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">FastAPI</span>
+          <!-- Docker -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">Docker</span>
+          <!-- Kubernetes -->
+          <span class="inline-flex items-center rounded-full border border-accent-200 bg-warm-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm transition-all duration-200 hover:bg-warm-100 hover:shadow-md">Kubernetes</span>
+        </div>
+
+        <p class="mt-10 text-center text-sm text-muted">
+          Plus Hugging Face, LlamaIndex, Qdrant, Milvus, LangSmith, Weights &amp; Biases, MLflow, and more.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- USE CASES — 3 detailed cards                                  -->
+    <!-- ============================================================ -->
+    <section class="bg-surface px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-widest text-brand-600">Use Cases</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            Agents in Action
+          </h2>
+          <p class="mt-4 text-lg text-muted">
+            See how organizations are deploying custom AI agents to transform operations, 
+            cut costs, and accelerate decision-making.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <!-- Use Case 1: Customer Support Agent -->
+          <div class="group rounded-2xl border border-border bg-white p-8 transition-all duration-300 hover:border-accent-200 hover:shadow-lg hover:-translate-y-1">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-warm-100">
+              <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+              </svg>
+            </div>
+            <span class="mt-5 inline-flex items-center rounded-full bg-warm-100 px-3 py-1 text-xs font-semibold text-brand-700">Customer Support</span>
+            <h3 class="mt-3 text-xl font-bold text-ink">Customer Support Agent</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">
+              An e-commerce company with 500K+ monthly support tickets deployed a custom AI 
+              support agent trained on their knowledge base, return policies, and product catalog. 
+              The agent autonomously resolves tier-1 and tier-2 issues — order status, returns, 
+              refunds, shipping inquiries — and seamlessly escalates complex cases to human 
+              agents with full conversation context.
+            </p>
+            <ul class="mt-5 space-y-2">
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="h-4 w-4 flex-shrink-0 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-muted"><strong class="text-ink">70%</strong> ticket deflection rate</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="h-4 w-4 flex-shrink-0 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-muted"><strong class="text-ink">24/7</strong> coverage across web, mobile &amp; WhatsApp</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="h-4 w-4 flex-shrink-0 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-muted"><strong class="text-ink">90%</strong> customer satisfaction score</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Use Case 2: Research & Analysis Agent -->
+          <div class="group rounded-2xl border border-border bg-white p-8 transition-all duration-300 hover:border-accent-200 hover:shadow-lg hover:-translate-y-1">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-warm-100">
+              <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+              </svg>
+            </div>
+            <span class="mt-5 inline-flex items-center rounded-full bg-warm-100 px-3 py-1 text-xs font-semibold text-brand-700">Research & Analysis</span>
+            <h3 class="mt-3 text-xl font-bold text-ink">Research & Analysis Agent</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">
+              A financial services firm uses a multi-agent research system that automatically 
+              gathers market intelligence from SEC filings, earnings call transcripts, news 
+              sources, and analyst reports. The research agent synthesizes findings into 
+              structured reports, while a second agent monitors for breaking developments 
+              and flags anomalies — all delivered daily to the investment team.
+            </p>
+            <ul class="mt-5 space-y-2">
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="h-4 w-4 flex-shrink-0 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-muted">Gathers from <strong class="text-ink">50+</strong> sources simultaneously</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                  <svg class="h-4 w-4 flex-shrink-0 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-muted">Synthesizes into <strong class="text-ink">executive-ready</strong> reports</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="h-4 w-4 flex-shrink-0 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-muted">Cuts research time by <strong class="text-ink">85%</strong></span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Use Case 3: Code Review Agent -->
+          <div class="group rounded-2xl border border-border bg-white p-8 transition-all duration-300 hover:border-accent-200 hover:shadow-lg hover:-translate-y-1">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-warm-100">
+              <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+              </svg>
+            </div>
+            <span class="mt-5 inline-flex items-center rounded-full bg-warm-100 px-3 py-1 text-xs font-semibold text-brand-700">Engineering</span>
+            <h3 class="mt-3 text-xl font-bold text-ink">Code Review Agent</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">
+              A SaaS engineering team of 80 developers integrated a code review agent directly 
+              into their GitHub CI/CD pipeline. On every pull request, the agent performs 
+              automated code quality analysis, security vulnerability scanning, style 
+              enforcement, and test coverage checks — providing line-level feedback within 
+              seconds and flagging blockers before human reviewers even look at the PR.
+            </p>
+            <ul class="mt-5 space-y-2">
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="h-4 w-4 flex-shrink-0 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-muted">Automated <strong class="text-ink">PR review</strong> in under 30 seconds</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="h-4 w-4 flex-shrink-0 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-muted">Catches <strong class="text-ink">security vulnerabilities</strong> pre-merge</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="h-4 w-4 flex-shrink-0 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-muted">Reduces review cycle time by <strong class="text-ink">60%</strong></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- WHY CUSTOM AGENTS? — comparison (bespoke vs off-the-shelf)    -->
+    <!-- ============================================================ -->
+    <section class="bg-white px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-widest text-brand-600">Why Custom Agents?</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            Off-the-Shelf Can't Cut It
+          </h2>
+          <p class="mt-4 text-lg text-muted">
+            Generic chatbots and SaaS AI tools promise a lot but deliver shallow results. 
+            Here's why bespoke agents outperform them at enterprise scale.
+          </p>
+        </div>
+
+        <div class="mt-16 overflow-hidden rounded-2xl border border-border shadow-sm">
+          <table class="min-w-full divide-y divide-border">
+            <thead class="bg-surface">
+              <tr>
+                <th scope="col" class="px-6 py-5 text-left text-sm font-semibold text-ink">Capability</th>
+                <th scope="col" class="px-6 py-5 text-left text-sm font-semibold text-brand-700">Custom AI Agent</th>
+                <th scope="col" class="px-6 py-5 text-left text-sm font-semibold text-muted">Off-the-Shelf Chatbot</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border">
+              <tr class="transition-colors hover:bg-warm-50/50">
+                <td class="px-6 py-4 text-sm font-medium text-ink">Domain Knowledge</td>
+                <td class="px-6 py-4 text-sm text-brand-700">
+                  <span class="inline-flex items-center gap-1.5">
+                    <svg class="h-4 w-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Deeply trained on your proprietary data, docs, and processes
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-sm text-muted">Generic knowledge only — no awareness of your business</td>
+              </tr>
+              <tr class="transition-colors hover:bg-warm-50/50">
+                <td class="px-6 py-4 text-sm font-medium text-ink">Tool Integration</td>
+                <td class="px-6 py-4 text-sm text-brand-700">
+                  <span class="inline-flex items-center gap-1.5">
+                    <svg class="h-4 w-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Connects to your CRM, ERP, databases, APIs, and internal tools
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-sm text-muted">Limited to pre-built integrations (if any)</td>
+              </tr>
+              <tr class="transition-colors hover:bg-warm-50/50">
+                <td class="px-6 py-4 text-sm font-medium text-ink">Multi-Step Workflows</td>
+                <td class="px-6 py-4 text-sm text-brand-700">
+                  <span class="inline-flex items-center gap-1.5">
+                    <svg class="h-4 w-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Reasons, plans, and executes complex multi-step tasks autonomously
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-sm text-muted">Single-turn Q&A — no task execution capability</td>
+              </tr>
+              <tr class="transition-colors hover:bg-warm-50/50">
+                <td class="px-6 py-4 text-sm font-medium text-ink">Accuracy & Hallucination</td>
+                <td class="px-6 py-4 text-sm text-brand-700">
+                  <span class="inline-flex items-center gap-1.5">
+                    <svg class="h-4 w-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    RAG-grounded answers with source citations and confidence scoring
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-sm text-muted">Prone to hallucination — no retrieval or verification layer</td>
+              </tr>
+              <tr class="transition-colors hover:bg-warm-50/50">
+                <td class="px-6 py-4 text-sm font-medium text-ink">Security & Compliance</td>
+                <td class="px-6 py-4 text-sm text-brand-700">
+                  <span class="inline-flex items-center gap-1.5">
+                    <svg class="h-4 w-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Self-hosted or VPC-deployed — SOC 2, GDPR, HIPAA ready
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-sm text-muted">Data leaves your infrastructure; shared model risks</td>
+              </tr>
+              <tr class="transition-colors hover:bg-warm-50/50">
+                <td class="px-6 py-4 text-sm font-medium text-ink">Human-in-the-Loop</td>
+                <td class="px-6 py-4 text-sm text-brand-700">
+                  <span class="inline-flex items-center gap-1.5">
+                    <svg class="h-4 w-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Configurable escalation rules, approval gates, and audit trails
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-sm text-muted">No oversight mechanism — fully automated or nothing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CTA SECTION                                                   -->
+    <!-- ============================================================ -->
+    <section class="bg-gradient-to-b from-white to-warm-50 px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          Ready to Build Your First AI Agent?
+        </h2>
+        <p class="mt-4 text-lg text-muted">
+          Let's identify the highest-impact agent use case for your business, design the 
+          architecture, and build a working prototype — all within a free, no-obligation 
+          discovery engagement.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/25 hover:bg-brand-700 hover:shadow-xl transition-all duration-200 active:scale-[0.97]"
+          >
+            Start Your Agent Journey
+            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href="mailto:hello@nexus-ai.com"
+            class="inline-flex items-center rounded-xl border-2 border-warm-200 px-8 py-4 text-base font-semibold text-ink hover:border-accent-400 hover:bg-white transition-all duration-200"
+          >
+            hello@nexus-ai.com
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-muted">
+          Includes a complimentary AI opportunity assessment and a proof-of-concept proposal — 
+          a $3,500 value, yours at no cost.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>

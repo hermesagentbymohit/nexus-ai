@@ -1,0 +1,132 @@
+---
+// No props needed
+---
+
+<section class="relative overflow-hidden bg-surface px-4 sm:px-6 lg:px-8">
+  <!-- Abstract geometric background -->
+  <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+    <!-- Large blurred circle off-center -->
+    <div class="absolute -top-48 -right-48 h-[600px] w-[600px] rounded-full bg-accent-100/30 blur-[120px]"></div>
+    <div class="absolute -bottom-32 -left-32 h-[400px] w-[400px] rounded-full bg-brand-100/20 blur-[100px]"></div>
+    <!-- Subtle geometric grid lines -->
+    <svg class="absolute inset-0 h-full w-full opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" stroke-width="0.5" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+    <!-- Floating abstract blob -->
+    <svg class="absolute top-1/4 left-[15%] h-64 w-64 text-accent-200/20" viewBox="0 0 200 200" fill="currentColor">
+      <path d="M45.3,-62.8C57.8,-54.8,66.7,-39.4,71.6,-22.9C76.5,-6.4,77.3,11.1,70.9,25.9C64.5,40.7,51,52.7,36.1,61.1C21.2,69.5,4.9,74.3,-9.2,71.7C-23.3,69.1,-35.2,59.1,-44.2,46.9C-53.2,34.7,-59.3,20.3,-60.7,5.4C-62.1,-9.6,-58.9,-25.3,-49.7,-37.6C-40.5,-49.9,-25.4,-58.8,-9.5,-66.1C6.4,-73.4,32.8,-70.8,45.3,-62.8Z" transform="translate(100 100)" />
+    </svg>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl">
+    <div class="flex flex-col lg:flex-row items-center gap-16 py-20 sm:py-28 lg:py-36">
+      <!-- Left: Text Content -->
+      <div class="flex-1 text-center lg:text-left max-w-2xl">
+        <!-- Live badge -->
+        <div class="mb-8 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50/80 px-4 py-1.5">
+          <span class="inline-flex h-2 w-2 rounded-full bg-brand-500"></span>
+          <span class="text-xs font-medium text-brand-700 tracking-wide">Now serving 100+ enterprises</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-ink leading-[1.08] tracking-[-0.03em]">
+          Intelligent Automation for the
+          <span class="text-accent-600">Modern Enterprise</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="mt-6 text-lg sm:text-xl leading-relaxed text-warm-600 max-w-xl">
+          We design and deploy production-grade AI agents and automation systems that transform how enterprises operate — cutting costs by 60% and accelerating decision-making at scale.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-10 flex flex-col sm:flex-row items-center lg:items-start gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/25 hover:bg-brand-700 hover:shadow-xl hover:shadow-brand-600/30 transition-all duration-200 active:scale-[0.97]"
+          >
+            Book a Demo
+            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href="/services"
+            class="inline-flex items-center rounded-xl border border-warm-300 px-8 py-4 text-base font-semibold text-ink hover:border-brand-300 hover:bg-brand-50/50 transition-all duration-200 active:scale-[0.97]"
+          >
+            Explore Services
+          </a>
+        </div>
+
+        <!-- Trusted by (pills) -->
+        <div class="mt-12">
+          <p class="text-xs font-semibold uppercase tracking-[0.12em] text-warm-400 mb-4">Trusted by industry leaders</p>
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="inline-flex items-center rounded-full bg-warm-100 px-4 py-2 text-xs font-medium text-warm-600">TechCorp</span>
+            <span class="inline-flex items-center rounded-full bg-warm-100 px-4 py-2 text-xs font-medium text-warm-600">FinServe</span>
+            <span class="inline-flex items-center rounded-full bg-warm-100 px-4 py-2 text-xs font-medium text-warm-600">HealthPlus</span>
+            <span class="inline-flex items-center rounded-full bg-warm-100 px-4 py-2 text-xs font-medium text-warm-600">RetailMax</span>
+            <span class="inline-flex items-center rounded-full bg-warm-100 px-4 py-2 text-xs font-medium text-warm-600">LogiSwift</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Bento-style stat cards -->
+      <div class="flex-1 max-w-md w-full">
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Card 1 -->
+          <div class="col-span-2 rounded-2xl border border-border/60 bg-surface/60 backdrop-blur-sm p-6 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-50 ring-1 ring-brand-200">
+                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-3xl font-normal text-ink" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">100+</p>
+                <p class="text-sm text-muted mt-0.5">Projects Delivered</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="rounded-2xl border border-border/60 bg-surface/60 backdrop-blur-sm p-5 shadow-sm">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-50 ring-1 ring-accent-200 mb-3">
+              <svg class="h-5 w-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <p class="text-2xl font-normal text-ink" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">99.9%</p>
+            <p class="text-xs text-muted mt-0.5">Uptime Guarantee</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="rounded-2xl border border-border/60 bg-surface/60 backdrop-blur-sm p-5 shadow-sm">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 ring-1 ring-brand-200 mb-3">
+              <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <p class="text-2xl font-normal text-ink" style="font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;">SOC 2</p>
+            <p class="text-xs text-muted mt-0.5">Compliant</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hidden lg:flex justify-center pb-8">
+      <div class="flex flex-col items-center gap-1 animate-bounce" style="animation-duration: 2.5s;">
+        <span class="text-[10px] font-semibold uppercase tracking-[0.15em] text-warm-400">Scroll</span>
+        <svg class="h-4 w-4 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>

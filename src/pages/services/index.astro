@@ -1,0 +1,197 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+
+interface ServiceDetail {
+  icon: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  benefits: string[];
+}
+
+const services: ServiceDetail[] = [
+  {
+    icon: `<svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>`,
+    title: "AI Agent Development",
+    subtitle: "Intelligent agents that think, reason, and act on your behalf",
+    description: "We design and deploy custom LLM-powered agents that understand your domain, reason through complex problems, and execute multi-step workflows autonomously. From simple Q&A bots to sophisticated multi-agent orchestrations handling enterprise-grade processes.",
+    benefits: [
+      "Custom LLM agents fine-tuned on your enterprise data",
+      "Retrieval-Augmented Generation (RAG) pipelines for factual accuracy",
+      "Multi-agent orchestration for complex cross-department workflows",
+      "Human-in-the-loop oversight for critical decision points",
+      "Seamless integration with existing APIs, databases, and SaaS tools"
+    ]
+  },
+  {
+    icon: `<svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>`,
+    title: "Workflow Automation",
+    subtitle: "Eliminate manual drudgery with intelligent process automation",
+    description: "We build automation pipelines that connect your tools, process your documents, and execute your repetitive tasks — all without manual intervention. Whether you need no-code workflows for your operations team or custom automation for complex ERP systems.",
+    benefits: [
+      "No-code automation builder for citizen developers",
+      "Custom API integrations with CRM, ERP, and legacy systems",
+      "Intelligent document processing with OCR and NLP",
+      "Automated data entry, validation, and reconciliation",
+      "Real-time workflow monitoring and performance analytics"
+    ]
+  },
+  {
+    icon: `<svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>`,
+    title: "Intelligent Analytics",
+    subtitle: "Turn raw data into foresight with AI-powered analytics",
+    description: "Stop drowning in spreadsheets. Our intelligent analytics platform ingests data from every corner of your business and surfaces actionable insights in real time. Predictive models forecast trends before they happen, and anomaly detection catches problems the moment they emerge.",
+    benefits: [
+      "Real-time dashboards with custom KPIs and drill-downs",
+      "Predictive analytics using time-series forecasting and ML models",
+      "Automated anomaly detection across operational and financial metrics",
+      "Natural language querying — ask questions in plain English",
+      "Export-ready reports with scheduled delivery to stakeholders"
+    ]
+  },
+  {
+    icon: `<svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg>`,
+    title: "Conversation AI",
+    subtitle: "24/7 intelligent conversations across every channel",
+    description: "Deliver seamless customer experiences at scale with AI that understands context, sentiment, and intent. Our conversation AI platform powers chatbots, voice agents, and omnichannel support systems that handle everything from FAQ deflection to complex ticket resolution.",
+    benefits: [
+      "Smart chatbots trained on your knowledge base and FAQs",
+      "Voice agents with natural speech recognition and synthesis",
+      "Omnichannel deployment — web, mobile, WhatsApp, Slack, and phone",
+      "Context-aware conversations that remember past interactions",
+      "Seamless escalation to human agents with full conversation history"
+    ]
+  },
+  {
+    icon: `<svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>`,
+    title: "Process Mining",
+    subtitle: "Discover hidden inefficiencies and high-ROI automation targets",
+    description: "Stop guessing where automation will have the biggest impact. Our process mining engine analyzes your actual operational data — event logs, system records, and user interactions — to build a precise map of how work really gets done. We identify bottlenecks, deviations, and opportunities that often go unnoticed.",
+    benefits: [
+      "Data-driven process discovery from your existing system logs",
+      "Visual process maps showing every workflow variant and deviation",
+      "Bottleneck identification with quantified time and cost impact",
+      "ROI simulation to prioritize automation initiatives",
+      "Continuous monitoring to track improvement over time"
+    ]
+  },
+  {
+    icon: `<svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>`,
+    title: "AI Consulting",
+    subtitle: "Strategic guidance from seasoned AI architects and engineers",
+    description: "Not sure where to start with AI? Our consulting practice helps you cut through the hype and build a practical, results-driven AI strategy. From architecture reviews and technology selection to team augmentation and proof-of-concept development, we meet you where you are.",
+    benefits: [
+      "AI strategy workshops tailored to your industry and goals",
+      "Architecture design and technology stack evaluation",
+      "Proof-of-concept development to validate before investing",
+      "Team augmentation with experienced ML engineers and prompt engineers",
+      "Responsible AI frameworks for governance, bias detection, and compliance"
+    ]
+  }
+];
+---
+
+<Layout
+  title="Services — Nexus AI"
+  description="Explore Nexus AI's full suite of enterprise AI services — from custom agent development and workflow automation to intelligent analytics, conversation AI, process mining, and strategic consulting."
+>
+  <Header />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-brand-900 via-brand-800 to-brand-950 px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-warm-300">Our Services</p>
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Enterprise AI Solutions<br />
+          <span class="text-warm-300">That Deliver Real Results</span>
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-warm-200">
+          From strategic consulting to production-grade AI agents — we provide end-to-end solutions 
+          that transform how your business operates. Each service is tailored to your unique needs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Detail Sections -->
+    {
+      services.map((service, index) => (
+        <section class={`px-4 sm:px-6 lg:px-8 py-24 sm:py-28 ${index % 2 === 0 ? 'bg-white' : 'bg-surface'}`}>
+          <div class="mx-auto max-w-7xl">
+            <div class={`grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <!-- Icon & Title Column -->
+              <div class={index % 2 === 1 ? 'lg:order-2' : ''}>
+                <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-warm-100 mb-6">
+                  <Fragment set:html={service.icon} />
+                </div>
+                <p class="text-sm font-semibold uppercase tracking-widest text-brand-600">Service</p>
+                <h2 class="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                  {service.title}
+                </h2>
+                <p class="mt-4 text-lg text-muted">
+                  {service.subtitle}
+                </p>
+                <p class="mt-6 text-base leading-relaxed text-muted">
+                  {service.description}
+                </p>
+              </div>
+
+              <!-- Benefits Column -->
+              <div class={index % 2 === 1 ? 'lg:order-1' : ''}>
+                <div class="rounded-2xl border border-border bg-white p-8 shadow-sm">
+                  <h3 class="text-lg font-semibold text-ink">Key Benefits</h3>
+                  <ul class="mt-6 space-y-4">
+                    {
+                      service.benefits.map((benefit) => (
+                        <li class="flex items-start gap-3">
+                          <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          <span class="text-sm text-muted">{benefit}</span>
+                        </li>
+                      ))
+                    }
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))
+    }
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-b from-white to-warm-50 px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          Not Sure Which Service Fits Your Needs?
+        </h2>
+        <p class="mt-4 text-lg text-muted">
+          Let's talk. Our team will assess your current workflows, identify the highest-impact opportunities, 
+          and build a tailored roadmap — no strings attached.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/25 hover:bg-brand-700 hover:shadow-xl transition-all duration-200 active:scale-[0.97]"
+          >
+            Schedule a Free Consultation
+            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href="mailto:hello@nexus-ai.com"
+            class="inline-flex items-center rounded-xl border-2 border-warm-200 px-8 py-4 text-base font-semibold text-ink hover:border-accent-400 hover:bg-white transition-all duration-200"
+          >
+            hello@nexus-ai.com
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-muted">
+          All consultations include a complimentary process mining assessment — a $2,500 value.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>

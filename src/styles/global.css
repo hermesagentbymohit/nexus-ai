@@ -1,0 +1,274 @@
+@import "tailwindcss";
+
+/* ─── Premium Design System ─────────────────────────────────────── *
+ *  Palette: Deep Emerald + Warm Taupe + Gold Accent               *
+ *  Typography: Instrument Serif (headings) + Space Grotesk (body) *
+ *  Atmosphere: Grain texture, smooth animations, editorial polish  *
+ * ────────────────────────────────────────────────────────────────── */
+
+@theme {
+  /* ── Brand: Deep Emerald ── */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+
+  /* ── Accent: Warm Gold ── */
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
+  --color-accent-800: #92400e;
+  --color-accent-900: #78350f;
+  --color-accent-950: #451a03;
+
+  /* ── Neutral: Warm Taupe (neither pure gray nor brown) ── */
+  --color-warm-50: #faf8f6;
+  --color-warm-100: #f0ede9;
+  --color-warm-200: #e1dcd5;
+  --color-warm-300: #ccc4b8;
+  --color-warm-400: #b3a898;
+  --color-warm-500: #9e917e;
+  --color-warm-600: #8a7c68;
+  --color-warm-700: #736653;
+  --color-warm-800: #5e5445;
+  --color-warm-900: #4e4539;
+  --color-warm-950: #2a2520;
+
+  /* ── Semantic aliases ── */
+  --color-surface: #faf8f6;
+  --color-surface-alt: #f0ede9;
+  --color-ink: #1e1b16;
+  --color-muted: #8a7c68;
+  --color-border: #e1dcd5;
+  --color-border-light: #f0ede9;
+}
+
+/* ─── Typography ─────────────────────────────────────────────────── */
+
+/* Instrument Serif — premium editorial serif for headings */
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('https://fonts.gstatic.com/s/instrumentserif/v4/naPFygGkGpGhFcC3a0Emw5b0w-s1dQ1u.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('https://fonts.gstatic.com/s/instrumentserif/v4/naPFygGkGpGhFcC3a0Emw5b0w-s1diVu.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Space Grotesk — clean, modern sans for body */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPb54C-s0.woff2') format('woff2');
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+/* ─── Base Layer ─────────────────────────────────────────────────── */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-ink);
+    background: var(--color-surface);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings use the serif */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+  }
+
+  /* Custom selection */
+  ::selection {
+    background: var(--color-brand-200);
+    color: var(--color-brand-950);
+  }
+
+  /* Custom focus ring */
+  :focus-visible {
+    outline: 2px solid var(--color-accent-400);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Links get a subtle underline animation */
+  a:not([class]) {
+    color: var(--color-brand-700);
+    text-decoration: none;
+    background-image: linear-gradient(var(--color-brand-300), var(--color-brand-300));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0 2px;
+    transition: background-size 0.25s ease;
+  }
+  a:not([class]):hover {
+    background-size: 100% 2px;
+  }
+}
+
+/* ─── Custom Scrollbar ───────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-warm-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-warm-300);
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-warm-400);
+}
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: var(--color-warm-300) var(--color-warm-100);
+    scrollbar-width: thin;
+  }
+}
+
+/* ─── Noise / Grain Texture ──────────────────────────────────────── */
+
+/*
+  Inline SVG noise filter as a base64 data URI.
+  Applied via a fixed pseudo-element so it overlays the entire page.
+  The grain overlay itself is defined in Layout.astro as a ::before.
+  Here we provide the reusable noise SVG.
+*/
+@layer utilities {
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+  }
+}
+
+/* ─── Animation Utilities ────────────────────────────────────────── */
+
+/* Fade-in on scroll (triggered by intersection observer or data attributes) */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Utility classes for animations */
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Staggered delay helpers */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
