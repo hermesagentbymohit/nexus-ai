@@ -1,7 +1,5 @@
 # build output
-dist/
 # generated types
-.astro/
 
 # dependencies
 node_modules/
@@ -26,3 +24,5 @@ public/screenshots/
 
 # jetbrains setting folder
 .idea/
+.astro/
+dist/
